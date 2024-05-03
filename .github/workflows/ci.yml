@@ -1,18 +1,18 @@
 name: CI
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - master
-      - add-placeholders-for-label
+    tags:
+      - "v*"
   pull_request:
     branches:
       - master
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: donkie/spoolman
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   #
