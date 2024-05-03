@@ -307,7 +307,7 @@ jobs:
   # Don't run this for pull requests
   #
   publish-images:
-    if: ${{ github.event_name != 'pull_request' }}
+    #if: ${{ github.event_name != 'pull_request' }}
     needs: [test, build-amd64, build-arm64, build-armv7, style, build-client]
     runs-on: ubuntu-latest
     steps:
