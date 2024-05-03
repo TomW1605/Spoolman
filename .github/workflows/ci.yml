@@ -1,11 +1,11 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
-    tags:
-      - "v*"
+      - add-placeholders-for-label
   pull_request:
     branches:
       - master
