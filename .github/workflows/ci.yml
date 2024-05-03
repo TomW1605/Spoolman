@@ -230,7 +230,7 @@ jobs:
   # Only push to buildcache and let release job push to registry
   #
   build-arm64:
-    if: ${{ github.event_name != 'pull_request' }}
+    #if: ${{ github.event_name != 'pull_request' }}
     needs: [build-client]
     runs-on: ubuntu-latest
     steps:
@@ -269,7 +269,7 @@ jobs:
   # Only push to buildcache and let release job push to registry
   #
   build-armv7:
-    if: ${{ github.event_name != 'pull_request' }}
+    #if: ${{ github.event_name != 'pull_request' }}
     needs: [build-client]
     runs-on: ubuntu-latest
     steps:
