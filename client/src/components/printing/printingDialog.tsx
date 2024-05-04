@@ -110,7 +110,7 @@ const PrintingDialog: React.FC<PrintingDialogProps> = ({ items, style, extraSett
         <tr key={rowIdx}>
           {row.map(function (item, colIdx) {
             return (
-              <td>
+              <td key={colIdx}>
                 <div
                   key={colIdx}
                   style={{
@@ -162,7 +162,9 @@ const PrintingDialog: React.FC<PrintingDialogProps> = ({ items, style, extraSett
               alignContent: "flex-start",
             }}
           >
+            <tbody>
             {itemRows}
+            </tbody>
           </table>
         </div>
       </div>
